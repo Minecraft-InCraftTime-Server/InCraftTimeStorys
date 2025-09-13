@@ -2,7 +2,7 @@
   "name": "vitepress-nav-template",
   "type": "module",
   "version": "1.0.0",
-  "description": "基于 VitePress 打造个人前端导航网站",
+  "description": "InCraftTime Story",
   "private": true,
   "scripts": {
     "dev": "vitepress dev docs --port=8732",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maomao1996/vitepress-nav-template.git"
+    "url": "git+https://github.com/Minecraft-InCraftTime-Server/InCraftTimeStorys.git"
   },
   "author": "maomao1996 <1714487678@qq.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maomao1996/vitepress-nav-template/issues"
+    "url": "https://github.com/Minecraft-InCraftTime-Server/InCraftTimeStorys/issues"
   },
-  "homepage": "https://github.com/maomao1996/vitepress-nav-template#readme",
+  "homepage": "https://github.com/Minecraft-InCraftTime-Server/InCraftTimeStorys",
   "devDependencies": {
     "@femm/prettier": "^1.1.0",
     "@femm/tailwind-config": "^1.0.0",

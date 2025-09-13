@@ -30,7 +30,21 @@ export default defineConfig({
     logo: '/logo.png',
 
     nav,
-    sidebar,
+    
+    sidebar: [
+      {
+        text: '主文档',
+        base: '/story',
+        items: [
+					{ text: '', link: '/new-players' },
+        ]
+      }
+    ],
+
+    editLink: {
+      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页面'
+    },
 
     /* 右侧大纲配置 */
     outline: {
@@ -78,14 +92,14 @@ export default defineConfig({
 
     /*** 自定义配置 ***/
     visitor: {
-      badgeId: 'maomao1996.vitepress-nav-template',
+      badgeId: 'Minecraft-InCraftTime-Server.InCraftTimeStorys',
     },
 
     comment: {
-      repo: 'maomao1996/vitepress-nav-template',
-      repoId: 'R_kgDOJC09Jg',
+      repo: 'Minecraft-InCraftTime-Server/InCraftTimeStorys',
+      repoId: 'R_kgDOPuyREQ',
       category: 'Announcements',
-      categoryId: 'DIC_kwDOJC09Js4Cekn0',
+      categoryId: 'DIC_kwDOPuyREc4CvY6Y',
     },
   },
 
