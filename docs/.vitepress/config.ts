@@ -11,12 +11,12 @@ export default defineConfig({
   base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
 
   lang: 'zh-CN',
-  title: '茂茂物语',
-  description: '茂茂的成长之路，包含前端常用知识、源码阅读笔记、各种奇淫技巧、日常提效工具等',
+  title: 'InCraftTime Stories',
+  description: 'InCraftTime的一些神人故事',
   head,
 
   lastUpdated: true,
-  cleanUrls: true,
+  // cleanUrls: true,
 
   /* markdown 配置 */
   markdown: {
@@ -38,11 +38,15 @@ export default defineConfig({
       label: '目录',
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/maomao1996/vitepress-nav-template' }],
+    socialLinks: [
+      { icon: 'bilibili', link: 'https://www.bilibili.com/video/BV12PdqYcEdB' },
+      { icon: 'qq', link: 'https://qm.qq.com/cgi-bin/qm/qr?authKey=upZAZpIgp3I7eJ9yDTmMGi6YMxZBBdjBlX9MNH9xU5We85RkTTFO0%2FvRfaG9ueTv&k=AYF9B_IVtMxbb6Fck-hZCbDDDROzcrIy&noverify=0' },
+      { icon: 'github', link: 'https://github.com/Minecraft-InCraftTime-Server' }
+    ],
 
     footer: {
-      message: '如有转载或 CV 的请标注本站原文地址',
-      copyright: 'Copyright © 2019-present maomao',
+      message: 'Powered By <a href="https://vitepress.dev/">VitePress</a>',
+      copyright: 'Generated from <a href="https://github.com/maomao1996/vitepress-nav-template/">maomao1996/vitepress-nav-template</a>',
     },
 
     lastUpdated: {
@@ -51,6 +55,14 @@ export default defineConfig({
         dateStyle: 'short',
         timeStyle: 'medium',
       },
+    },
+    
+    notFound: {
+      title: '页面未找到',
+      quote:
+        '但如果你不改变方向，并且继续寻找，你可能最终会到达你所前往的地方。',
+      linkLabel: '前往首页',
+      linkText: '带我回首页'
     },
 
     docFooter: {
