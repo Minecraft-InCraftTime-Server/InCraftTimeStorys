@@ -32,11 +32,12 @@ export default defineConfig({
     nav,
     
     sidebar: [
+      { text: '引言', link: '/introduction' },
       {
         text: '主文档',
         base: '/story',
         items: [
-					{ text: '', link: '/new-players' },
+          { text: '', link: '/introduction' },
         ]
       }
     ],
