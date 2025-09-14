@@ -1,3 +1,7 @@
+---
+navbar: false
+---
+
 # 功能测试页
 
 ## medium-zoom
