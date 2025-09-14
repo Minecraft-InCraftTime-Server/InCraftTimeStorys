@@ -1,5 +1,5 @@
 ---
-outline: default
+outline: deep
 ---
 
 # 引言

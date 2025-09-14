@@ -34,10 +34,10 @@ export default defineConfig({
     sidebar: [
       { text: '引言', link: '/introduction' },
       {
-        text: '主文档',
+        text: '神人故事',
         base: '/story',
         items: [
-          { text: '', link: '/introduction' },
+          { text: '更多', link: '/more' },
         ]
       }
     ],
