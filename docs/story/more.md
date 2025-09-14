@@ -1,5 +1,6 @@
 ---
 outline: [3,4]
+navbar: false
 ---
 
 # 更多
