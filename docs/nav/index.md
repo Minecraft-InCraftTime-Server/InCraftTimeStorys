@@ -2,6 +2,7 @@
 layoutClass: m-nav-layout
 outline: [2, 3, 4]
 sidebar: false
+navbar: false
 ---
 
 <script setup>
