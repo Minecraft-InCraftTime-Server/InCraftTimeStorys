@@ -3,7 +3,7 @@ name: 自动上传文件到服务器
 on:
   push:
     branches:
-      - gh-pages  # 设置触发分支，通常为main或master
+      - main  # 设置触发分支，通常为main或master
 
 jobs:
   deploy:
@@ -19,8 +19,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./  # 本地要上传的目录（默认仓库根目录）
-          server-dir: /  # 服务器目标目录（根据实际修改）
+          local-dir: ./dist/  # 本地要上传的目录（默认仓库根目录）
+          server-dir: /index/  # 服务器目标目录（根据实际修改）
           exclude: |
             **/.git*
             **/.git*/**
