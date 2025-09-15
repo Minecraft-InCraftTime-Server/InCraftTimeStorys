@@ -1,106 +1,70 @@
-# vitepress-nav-template
+# InCraftTime 神人故事
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/maomao1996/picture/main/vitepress-nav-template/home.webp" alt="home" />
-</p>
-<p align="center"> 基于 <b>VitePress</b> 的个人前端导航页面模板 </p>
-<p align='center'><a href="/guide.md">基础教程</a> | <a href="https://notes.fe-mm.com/">作者博客</a></p>
+> [!WARNING]
+> 开发过程中 暂不接受外部贡献者的PR。
 
----
+> [!TIP]
+> 我们欢迎你向此仓库提交代码，你可以向此仓库提交或修改内容，具体可在每一页的页脚找到编辑按钮，流程与普通PR一致。
 
-## 预览地址
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
 
-- <https://fe-nav.netlify.app/nav/>
-- <https://maomao1996.github.io/vitepress-nav-template/nav/>
+ICT神人故事
 
-## 功能
+## 对所有Contributor的提示
 
-- 新增 `layout-class` 方便更好的自定义样式
-- 默认中文
-- 自带前端导航模块
-- 支持访客统计
-- 支持 [giscus 评论](https://giscus.app/zh-CN)
-- 支持日夜颜色模式自适应切换
-- 支持 Github Pages 直接部署上线
-  - 1. 开启 github actions
-  - 2. 配置 Pages 的 Branch 为 `gh-pages` 分支，文件夹为 `/(root)`
-  - 3. 访问地址为 `https://<username>.github.io/<repository>/` 或自定义域名
-- 支持 [tailwindcss](https://github.com/tailwindlabs/tailwindcss)
-- 支持查看 vue 示例组件源码（使用 [vite-plugin-markdown-preview](https://github.com/jaskang/vite-plugin-markdown-preview)）
+该文档站使用[VitePress](https://vitepress.dev/zh/)构建，一些特殊语法可见以上或者[此处](https://docs.ict.msyark.top/markdown-examples)
 
-#### 使用自定义域名部署
+推荐使用本地预览，修改代码后请务必验证后再提交。
 
-当 Github Pages 使用自定义域名时，需要修改 `.github/workflows/deploy.yml` 脚本中的 `APP_BASE_PATH` 为 `/`
+接下来是部署本地预览的方法。
 
-更**推荐使用第三方服务绑定域名来部署**
+### 本地部署
 
-- [Netlify](https://www.netlify.com/)
-- [Vercel](https://vercel.com/)
-- [Cloudflare Pages](https://pages.cloudflare.com/)
+#### 1. 克隆分支仓库
 
-使用仪表板创建新项目并更改这些设置：
+每一步的开始，Clone仓库，由于你需要在自己的Fork仓库修改，请Clone你自己的仓库而不是本仓库。推荐[GitHub Desktop](https://desktop.github.com/download/)。
 
-- **构建命令：** `npm run build`
-- **输出目录：** `dist`
-- **node 版本：** `18` (或更高版本)
+在电脑上已经安装GitHub Desktop后，点击绿色Code按钮中的`Open with Github Desktop`
 
-更多部署指南请查看 [VitePress 各平台部署指南](https://vitepress.dev/zh/guide/deploy#platform-guides)
+![Open with Github Desktop](https://github.com/user-attachments/assets/adb4bfe4-d4d7-46ad-96d8-7d811ef95a02)
 
-### 开启访客统计
+也可使用Git操作，此处不再说明，下同
 
-需在 `docs/.vitepress/config.ts` 中配置 `themeConfig.visitor`
+#### 2. 准备环境
 
-```ts
-export default defineConfig({
-  themeConfig: {
-    /* 访客统计 */
-    visitor: {
-      /** 统计 id（单独页面的统计会作为前缀使用）*/
-      badgeId: 'maomao1996.vitepress-nav-template',
-    },
-  },
-})
+这里以Windows电脑为例，在确保电脑已经有Node.js环境情况下且npm指令可正常使用，打开仓库目录（可直接从GitHub Desktop打开）并右键`在终端中打开`，运行以下内容
+
+```bash
+npm add -D vitepress
 ```
 
-### 开启 giscus 评论
+![npm add -D vitepress](https://github.com/user-attachments/assets/90ab0d0e-70fa-4c0f-9c9c-3f263c5358dc)
 
-需在 `docs/.vitepress/config.ts` 中配置 `themeConfig.comment`
+> [!NOTE]
+> 此处已经安装过
 
-```ts
-export default defineConfig({
-  themeConfig: {
-    /**
-     * giscus 评论配置
-     *  请根据 https://giscus.app/zh-CN 生成内容填写
-     */
-    comment: {
-      /** github 仓库地址 */
-      repo: '',
-      /** giscus 仓库 ID */
-      repoId: '',
-      /** Discussion 分类 */
-      category: '',
-      /** giscus 分类 ID */
-      categoryId: '',
-    },
-  },
-})
+### 3. 生成一个网站
+
+完成上述所有操作后，继续执行
+
+```bash
+npm run dev
 ```
 
-#### 在指定页面关闭评论
+![npm run docs:dev](https://github.com/user-attachments/assets/6141e5a2-c797-47aa-8706-46fe821b559b)
 
-需在指定页面的 `markdown` 文件中添加如下 `frontmatter` 配置
+> [!NOTE]
+> 图中命令略有不同，请以文字为准
 
-```md
----
-comment: false
----
+接着打开终端中的[链接](http://localhost:5173/)即可访问
 
-# 功能测试页
-```
+直接修改Markdown源文件，可以看到修改后会自动实时刷新，无需手动按F5或者按刷新按钮，并且延迟很低
 
-docs: 更新 README
+> [!TIP]
+> 预览前不要忘记保存
 
-## 说明
+#### 4. 推送更改
 
-前端导航模块由 [茂茂 | maomao](https://github.com/maomao1996) 开发，如有引用、借鉴的请保留版权声明：<https://github.com/maomao1996/vitepress-nav-template>
+写完不要忘记Push，在GitHub Desktop中要先Commit更改再Push，否则没人能看见你的更改
+
+改完以后确认无问题交PR
