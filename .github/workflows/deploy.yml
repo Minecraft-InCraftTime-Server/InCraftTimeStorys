@@ -65,12 +65,3 @@ jobs:
           publish_branch: gh-pages
           # 静态文件所在目录
           publish_dir: dist
-
-      - name: Upload to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.1
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: /dist/
-          server-dir: /  # server-dir
