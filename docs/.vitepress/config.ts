@@ -43,7 +43,7 @@ export default defineConfig({
     ],
 
     editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+      pattern: 'https://github.com/Minecraft-InCraftTime-Server/InCraftTimeStorys/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页面'
     },
 
@@ -60,8 +60,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Powered By <a href="https://vitepress.dev/">VitePress</a>',
-      copyright: 'Generated from <a href="https://github.com/maomao1996/vitepress-nav-template/">maomao1996/vitepress-nav-template</a>',
+      message: 'Powered By <a href="https://vitepress.dev/">VitePress</a><br>Generated from <a href="https://github.com/maomao1996/vitepress-nav-template/">maomao1996/vitepress-nav-template</a>',
+      copyright: '©Copyright 2019-present <a href="https://github.com/Minecraft-InCraftTime-Server">InCraftTime</a>',
     },
 
     lastUpdated: {
