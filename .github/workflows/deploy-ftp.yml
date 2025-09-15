@@ -3,26 +3,34 @@ name: 自动上传文件到服务器
 on:
   push:
     branches:
-      - main  # 设置触发分支，通常为main或master
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 检查文件
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '22'
-          cache: 'npm'
-          cache-dependency-path: pnpm-lock.yaml
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Build frontend project
         run: |
-          npm run build
+          if [ "$FORCE_ROOT_BASE" = "true" ]; then export GITHUB_REPOSITORY=""; fi
+          pnpm run build
 
       - name: 上传文件
         uses: SamKirkland/FTP-Deploy-Action@v4.3.1
@@ -30,8 +38,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/  # 本地要上传的目录（默认仓库根目录）
-          server-dir: /index/  # 服务器目标目录（根据实际修改）
+          local-dir: dist/
+          server-dir: /index/
           exclude: |
             **/.git*
             **/.git*/**
