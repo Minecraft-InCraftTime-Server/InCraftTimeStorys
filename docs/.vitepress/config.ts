@@ -35,7 +35,7 @@ export default defineConfig({
       { text: '引言', link: '/introduction' },
       {
         text: '神人故事',
-        base: '/storys',
+        base: '/story',
         items: [
           { text: '更多', link: '/more' },
         ]
