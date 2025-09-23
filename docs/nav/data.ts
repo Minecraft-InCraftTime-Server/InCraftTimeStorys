@@ -7,48 +7,13 @@ type NavData = {
 
 export const NAV_DATA: NavData[] = [
   {
-    title: 'A',
+    title: '怪盗基德们',
     items: [
       {
-        icon: 'https://api.mineatar.io/face/5af8302065504dc4b9969cff18d1b228',
-        title: 'ID',
-        desc: 'Des',
-        link: './story/ID',
-      },
-      {
-        icon: 'https://api.mineatar.io/face/<uuid>',
-        title: 'ID',
-        desc: 'Des',
-        link: './story/ID',
-      },
-      {
-        icon: 'https://api.mineatar.io/face/<uuid>',
-        title: 'ID',
-        desc: 'Des',
-        link: './story/ID',
-      },
-      {
-        icon: 'https://api.mineatar.io/face/<uuid>',
-        title: 'ID',
-        desc: 'Des',
-        link: './story/ID',
-      },
-      {
-        icon: 'https://api.mineatar.io/face/<uuid>',
-        title: 'ID',
-        desc: 'Des',
-        link: './story/ID',
-      },
-    ],
-  },
-  {
-    title: 'B',
-    items: [
-      {
-        icon: 'https://api.mineatar.io/face/<uuid>',
-        title: 'ID',
-        desc: 'Des',
-        link: './story/ID',
+        icon: 'https://api.mineatar.io/face/cca7c22a33f14393a80065a48632ffb5',
+        title: 'BUT_Xiaoyuan',
+        desc: '巨额神偷，横扫10个沉重模板、1试炼王冠+若干残骸试图百万撤离',
+        link: './story/but_xiaoyuan.html',
       },
       {
         icon: 'https://api.mineatar.io/face/<uuid>',

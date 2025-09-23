@@ -37,6 +37,7 @@ export default defineConfig({
         text: '神人故事',
         base: '/story',
         items: [
+          { text: 'BUT_Xiaoyuan', link: '/but_xiaoyuan' },
           { text: '更多', link: '/more' },
         ]
       }
