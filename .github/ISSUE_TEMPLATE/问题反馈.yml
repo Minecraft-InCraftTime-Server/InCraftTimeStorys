@@ -1,7 +1,7 @@
 name: 问题反馈
 about: 当网页上出现了错误的信息或表达请选择此项
 title: "[BUG]: "
-labels: 新的, 问题
+labels: ["新的", "问题"]
 assignees: Michaelshenmo
 type: "Bug"
 body:
